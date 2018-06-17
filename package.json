@@ -5,6 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build+run": "npm run build && npm start",
+    "build": "tsc",
     "start": "node dist/index.js"
   },
   "repository": {
@@ -16,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/TunnelHunters/robot-master/issues"
   },
-  "homepage": "https://github.com/TunnelHunters/robot-master#readme"
+  "homepage": "https://github.com/TunnelHunters/robot-master#readme",
+  "devDependencies": {
+    "@types/ws": "^5.1.2",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "ws": "^5.2.0"
+  }
 }
