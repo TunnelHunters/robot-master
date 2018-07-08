@@ -1,6 +1,6 @@
 import WebSocket from 'ws';
 import EventEmitter from 'events';
-import * as motorSlave from './lib/motor-control-slave'
+import * as motorSlave from './lib/motor-control'
 
 const serverURL = process.env.THZ_serverURL;
 
