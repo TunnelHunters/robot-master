@@ -1,6 +1,6 @@
 import { Socket, Server, createServer } from 'net'
-import { EventEmitter } from 'events'
 import { existsSync, unlinkSync } from 'fs'
+import EventEmitter from 'events'
 import exitHook from 'exit-hook'
 
 const socket_path = process.env.THZ_videoSocket;
@@ -14,7 +14,7 @@ exitHook(() => {
     console.log(`Deleted ${socket_path}.`)
 });
 
-export class VideoSlave extends EventEmitter {
+export default class VideoSlave extends EventEmitter {
     private socket: Socket;
     private server: Server = createServer().listen(socket_path, () => console.log(`listening at ${socket_path}`));
     private accumulator: Buffer = Buffer.alloc(0);
